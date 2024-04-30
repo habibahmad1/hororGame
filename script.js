@@ -32,8 +32,10 @@ const level = document.querySelector("#level");
 function toggleAudio() {
   if (audio.paused) {
     audio.play(); // Putar audio jika sedang di-pause
+    mute.textContent = "Pause BGM";
   } else {
     audio.pause(); // Jeda audio jika sedang diputar
+    mute.textContent = "Play BGM";
   }
 }
 mute.addEventListener("click", toggleAudio);
@@ -53,10 +55,33 @@ credit.addEventListener("click", () => {
   credits.style.display = "block";
 });
 
-// Rintangan lvl
-const dangerBox = document.querySelector("#dangerBox");
-const scream = document.querySelector("#scream");
+// Generate box
+const box = document.querySelector(".box");
+const boxCount = document.querySelector(".boxCount");
 
-dangerBox.addEventListener("click", () => {
-  scream.play();
+for (let i = 1; i <= 11; i++) {
+  const boxBaru = document.createElement("img");
+  boxBaru.src = "./img/door.png";
+  boxBaru.classList.add("box");
+
+  boxCount.appendChild(boxBaru);
+}
+
+// Rintangan lvl
+const scream = document.querySelector("#scream");
+const boxAll = document.querySelectorAll(".box");
+
+boxAll.forEach((item) => {
+  item.addEventListener("click", () => {
+    door.play();
+  });
+});
+
+// Back to Menu
+const hantuMenu = document.querySelector(".ghost1");
+
+hantuMenu.addEventListener("click", () => {
+  level.style.display = "none";
+  menu.style.display = "block";
+  credit.style.display = "block";
 });

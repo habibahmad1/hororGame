@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
 
+* {
+  user-select: none;
+}
+
 body {
   margin: 0;
   font-family: "Creepster", system-ui;
@@ -29,7 +33,7 @@ p {
 p:hover {
   cursor: pointer;
   color: white;
-  transform: scale(1.7);
+  transform: scale(1.5);
 }
 
 .title {
@@ -43,23 +47,26 @@ p:hover {
 /* CSS Level */
 #level {
   display: none;
+  background-color: #3b3a3a;
 }
 #titleLevel {
   display: flex;
   justify-content: center;
   font-size: 50px;
   color: red;
-  z-index: -3;
+  z-index: -223;
+  text-align: center;
 }
 
 h3 {
-  z-index: -3;
+  z-index: 4;
 }
 
 #rintangan {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #3b3a3a;
 }
 
 #dangerBox {
@@ -103,4 +110,44 @@ h3 {
 
 a {
   text-decoration: none;
+}
+
+/* Box */
+.box {
+  width: 150px;
+  margin: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.box:hover {
+  border: 2px solid white;
+}
+
+.boxCount {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+/* ghost */
+.ghost1 {
+  width: 100px;
+  position: absolute;
+  top: 30px;
+  z-index: 1;
+  animation: gerak 10s infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes gerak {
+  from {
+    transform: translateX(-150px) translateY(-20px);
+  }
+  to {
+    transform: translateX(150px) translateY(20px);
+  }
 }
