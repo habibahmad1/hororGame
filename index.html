@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Horor Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2017/01/31/23/32/mask-2028211_1280.png" type="image/png" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="menu">
+        <div id="listMenu">
+          <h1 class="title">Horror Game</h1>
+          <audio src="./bgm/bg sound.mp3" autoplay loop id="bgm"></audio>
+          <audio src="./bgm/door.mp3" id="door"></audio>
+          <audio src="./bgm/Scream.mp3" id="scream"></audio>
+          <p id="start" class="effect">Start Game</p>
+          <p id="mute" class="effect">Play / Mute Sound</p>
+          <p id="credit" class="effect">Credit</p>
+          <p id="quit" class="effect">Quit Game</p>
+        </div>
+      </div>
+
+      <div id="level">
+        <div id="titleLevel">
+          <h3>Level 1</h3>
+        </div>
+        <div id="rintangan">
+          <div id="dangerBox"></div>
+        </div>
+        <a href="/" class="toMenu">Back to Menu</a>
+      </div>
+
+      <!-- Credit -->
+      <div id="credits">
+        <h3>
+          Created By <br />
+          <span>Habib Ahmad</span>
+        </h3>
+        <a href="/" class="toMenu">Back to Menu</a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
