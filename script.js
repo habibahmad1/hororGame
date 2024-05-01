@@ -82,7 +82,7 @@ boxAll.forEach((item, index) => {
       imgZonk.style.display = "flex";
       setTimeout(() => {
         window.location.reload();
-      }, 3000);
+      }, 5000);
       bgm.pause();
       audio.play();
     } else {
