@@ -93,6 +93,9 @@ boxAll.forEach((item, index) => {
       alert("Anda Menang!");
       scream.pause();
       imgZonk.style.display = "none";
+      setTimeout(() => {
+        window.location.reload();
+      }, 5000);
     }
   });
 });
