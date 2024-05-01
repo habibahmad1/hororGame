@@ -72,6 +72,8 @@ const imgAman = document.querySelector(".imgAman");
 const boxAll = document.querySelectorAll(".box");
 const zonk = Math.floor(Math.random() * 11) + 0;
 
+let remainingItems = boxAll.length;
+
 boxAll.forEach((item, index) => {
   item.addEventListener("click", () => {
     door.play();
@@ -85,6 +87,10 @@ boxAll.forEach((item, index) => {
       audio.play();
     } else {
       item.src = "./img/aman.png";
+    }
+    remainingItems--;
+    if (remainingItems === 1) {
+      alert("Anda Menang!");
     }
   });
 });
