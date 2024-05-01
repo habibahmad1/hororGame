@@ -70,7 +70,7 @@ const scream = document.querySelector("#scream");
 const imgZonk = document.querySelector(".imgZonk");
 const imgAman = document.querySelector(".imgAman");
 const boxAll = document.querySelectorAll(".box");
-const zonk = Math.floor(Math.random() * 11) + 0;
+const zonk = Math.floor(Math.random() * boxAll.length) + 0;
 
 let remainingItems = boxAll.length;
 
@@ -90,12 +90,10 @@ boxAll.forEach((item, index) => {
     }
     remainingItems--;
     if (remainingItems === 1) {
-      alert("Anda Menang!");
       scream.pause();
       imgZonk.style.display = "none";
-      setTimeout(() => {
-        window.location.reload();
-      }, 5000);
+      alert("Anda Menang!");
+      window.location.reload();
     }
   });
 });
