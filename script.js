@@ -88,7 +88,7 @@ boxAll.forEach((item, index) => {
         window.location.reload();
       }, 3000);
     } else {
-      item.style.backgroundColor = "White";
+      item.src = "./img/aman.png";
     }
   });
 });
