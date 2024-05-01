@@ -7,7 +7,7 @@ function playAudio() {
   audio.play();
 }
 
-// playAudio();
+playAudio();
 
 function playDoor() {
   door.play();
