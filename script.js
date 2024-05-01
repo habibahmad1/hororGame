@@ -104,6 +104,7 @@ boxAll.forEach((item, index) => {
 
 // Back to Menu
 const hantuMenu = document.querySelector(".ghost1");
+const hantuMenu2 = document.querySelector(".ghost3");
 
 hantuMenu.addEventListener("click", () => {
   level.style.display = "none";
@@ -111,4 +112,11 @@ hantuMenu.addEventListener("click", () => {
   credit.style.display = "block";
   audio.play();
   bgm.pause();
+});
+
+hantuMenu2.addEventListener("click", () => {
+  level.style.display = "none";
+  menu.style.display = "block";
+  credits.style.display = "none";
+  audio.play();
 });
