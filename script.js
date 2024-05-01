@@ -2,12 +2,7 @@ const audio = document.getElementById("bgm");
 const door = document.getElementById("door");
 const bgm = document.getElementById("danger");
 
-// Fungsi untuk memainkan audio
-function playAudio() {
-  audio.play();
-}
-
-playAudio();
+audio.play();
 
 function playDoor() {
   door.play();
@@ -78,7 +73,6 @@ const boxAll = document.querySelectorAll(".box");
 const zonk = Math.floor(Math.random() * 11) + 0;
 
 boxAll.forEach((item, index) => {
-  console.log(item);
   item.addEventListener("click", () => {
     door.play();
     if (index == zonk) {
@@ -87,6 +81,8 @@ boxAll.forEach((item, index) => {
       setTimeout(() => {
         window.location.reload();
       }, 3000);
+      bgm.pause();
+      audio.play();
     } else {
       item.src = "./img/aman.png";
     }
