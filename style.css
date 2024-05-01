@@ -115,7 +115,7 @@ a {
 /* Box */
 .box {
   width: 150px;
-  margin: 0;
+  margin: 5px;
   border-radius: 10px;
   cursor: pointer;
   border: 2px solid transparent;
@@ -150,4 +150,31 @@ a {
   to {
     transform: translateX(150px) translateY(20px);
   }
+}
+
+/* Zonk */
+.imgZonk {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  z-index: 11111;
+}
+
+/* aman */
+.aman {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+}
+
+.aman img {
+  width: 150px;
 }

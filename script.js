@@ -1,12 +1,13 @@
 const audio = document.getElementById("bgm");
 const door = document.getElementById("door");
+const bgm = document.getElementById("danger");
 
 // Fungsi untuk memainkan audio
 function playAudio() {
   audio.play();
 }
 
-playAudio();
+// playAudio();
 
 function playDoor() {
   door.play();
@@ -46,6 +47,8 @@ start.addEventListener("click", () => {
   menu.style.display = "none";
   credit.style.display = "none";
   level.style.display = "block";
+  audio.pause();
+  bgm.play();
 });
 
 // credit
@@ -69,11 +72,24 @@ for (let i = 1; i <= 11; i++) {
 
 // Rintangan lvl
 const scream = document.querySelector("#scream");
+const imgZonk = document.querySelector(".imgZonk");
+const imgAman = document.querySelector(".imgAman");
 const boxAll = document.querySelectorAll(".box");
+const zonk = Math.floor(Math.random() * 11) + 0;
 
-boxAll.forEach((item) => {
+boxAll.forEach((item, index) => {
+  console.log(item);
   item.addEventListener("click", () => {
     door.play();
+    if (index == zonk) {
+      scream.play();
+      imgZonk.style.display = "flex";
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
+    } else {
+      item.style.backgroundColor = "White";
+    }
   });
 });
 
@@ -84,4 +100,6 @@ hantuMenu.addEventListener("click", () => {
   level.style.display = "none";
   menu.style.display = "block";
   credit.style.display = "block";
+  audio.play();
+  bgm.pause();
 });
