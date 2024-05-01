@@ -1,8 +1,11 @@
 const audio = document.getElementById("bgm");
 const door = document.getElementById("door");
 const bgm = document.getElementById("danger");
+const win = document.getElementById("win");
 
-audio.play();
+document.addEventListener("DOMContentLoaded", function () {
+  audio.play();
+});
 
 function playDoor() {
   door.play();
@@ -92,6 +95,7 @@ boxAll.forEach((item, index) => {
     if (remainingItems === 1) {
       scream.pause();
       imgZonk.style.display = "none";
+      win.play();
       alert("Anda Menang!");
       window.location.reload();
     }
