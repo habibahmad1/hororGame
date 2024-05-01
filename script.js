@@ -91,6 +91,8 @@ boxAll.forEach((item, index) => {
     remainingItems--;
     if (remainingItems === 1) {
       alert("Anda Menang!");
+      scream.pause();
+      imgZonk.style.display = "none";
     }
   });
 });
